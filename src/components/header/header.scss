@@ -1,0 +1,58 @@
+@import "../../styles/main.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  height: $header-height;
+  color: $text-color;
+  background: $body-background-color;
+  padding: 2rem 5rem;
+  letter-spacing: 0.12em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 0 5px $theme-color;
+
+  &__title-text {
+    cursor: pointer;
+    font-size: 3rem;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  &__bar {
+    display: flex;
+    list-style: none;
+    right: 0;
+    position: absolute;
+    margin-right: 0.5em;
+
+    &-link {
+      cursor: pointer;
+      display: block;
+      padding: 0.8rem 1.6rem;
+      position: relative;
+      background: transparent;
+      border-radius: 5px;
+      margin-right: 2rem;
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    padding: 1rem;
+  }
+}
