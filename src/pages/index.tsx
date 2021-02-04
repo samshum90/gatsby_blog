@@ -3,13 +3,24 @@ import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 
-const IndexPage = ({ data }) => {
+interface Props {
+  data: {
+    allMarkdownRemark: any
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+  }
+}
+
+const IndexPage: React.FC<Props> = ({ data }: Props) => {
   const { edges } = data.allMarkdownRemark
 
   return (
     <Layout>
       <div>
-        {edges.map(edge => {
+        {edges.map((edge: any) => {
           const { frontmatter } = edge.node
           return (
             <div key={frontmatter.path}>

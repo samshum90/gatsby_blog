@@ -1,7 +1,19 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
-const Template = ({ data, pathContext }) => {
+interface Props {
+  data: {
+    markdownRemark: any
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+  }
+  pathContext: any
+}
+
+const Template: React.FC<Props> = ({ data, pathContext }: Props) => {
   const title = data.markdownRemark.frontmatter.title
   const date = data.markdownRemark.frontmatter.date
   const html = data.markdownRemark.html
