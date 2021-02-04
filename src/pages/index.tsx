@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import "../styles/Main.scss"
 
 import Layout from "../components/layout/layout"
+import Banner from "../components/banner/banner"
 
 interface Props {
   data: {
@@ -21,6 +22,7 @@ const IndexPage: React.FC<Props> = ({ data }: Props) => {
   return (
     <Layout>
       <div>
+        <Banner />
         {edges.map((edge: any) => {
           const { frontmatter } = edge.node
           return (

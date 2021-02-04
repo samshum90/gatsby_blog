@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
+import Layout from "../components/layout/layout"
+
 interface Props {
   data: {
     markdownRemark: any
@@ -20,7 +22,7 @@ const Template: React.FC<Props> = ({ data, pathContext }: Props) => {
   const { next, prev } = pathContext
 
   return (
-    <div>
+    <Layout>
       <h1>{title}</h1>
       <div>
         <em>{date}</em>
@@ -49,7 +51,7 @@ const Template: React.FC<Props> = ({ data, pathContext }: Props) => {
           </Link>
         )}
       </p>
-    </div>
+    </Layout>
   )
 }
 
