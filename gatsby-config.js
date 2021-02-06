@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -23,7 +24,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-typescript`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

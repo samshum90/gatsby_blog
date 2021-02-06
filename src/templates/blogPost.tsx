@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
+import "./blogPost.scss"
 import Layout from "../components/layout/layout"
 
 interface Props {
@@ -9,6 +10,10 @@ interface Props {
     site: {
       siteMetadata: {
         title: string
+        date: string
+        path: string
+        tags: string[]
+        excerpt: string
       }
     }
   }
@@ -23,34 +28,38 @@ const Template: React.FC<Props> = ({ data, pathContext }: Props) => {
 
   return (
     <Layout>
-      <h1>{title}</h1>
-      <div>
-        <em>{date}</em>
+      <div className="blogPost">
+        <div className="blogPost__title">
+          <h1 className="blogPost__title-text">{title}</h1>
+        </div>
+        <div>
+          <em>{date}</em>
+        </div>
+        <br />
+        <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
+        <p>
+          {prev && (
+            <Link to={prev.frontmatter.path}>
+              {prev.frontmatter.title}{" "}
+              <span role="img" aria-label="point-left">
+                👈{" "}
+              </span>
+              Previous
+            </Link>
+          )}
+        </p>
+        <p>
+          {next && (
+            <Link to={next.frontmatter.path}>
+              Next{" "}
+              <span role="img" aria-label="point-right">
+                👉
+              </span>
+              {next.frontmatter.title}
+            </Link>
+          )}
+        </p>
       </div>
-      <br />
-      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
-      <p>
-        {prev && (
-          <Link to={prev.frontmatter.path}>
-            {prev.frontmatter.title}{" "}
-            <span role="img" aria-label="point-left">
-              👈{" "}
-            </span>
-            Previous
-          </Link>
-        )}
-      </p>
-      <p>
-        {next && (
-          <Link to={next.frontmatter.path}>
-            Next{" "}
-            <span role="img" aria-label="point-right">
-              👉
-            </span>
-            {next.frontmatter.title}
-          </Link>
-        )}
-      </p>
     </Layout>
   )
 }

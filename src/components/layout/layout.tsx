@@ -21,13 +21,11 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
   `)
 
   return (
-    <>
+    <div className="layout">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div>
-        <main>{children}</main>
-      </div>
+      <main>{children}</main>
       <Footer />
-    </>
+    </div>
   )
 }
 

@@ -6348,9 +6348,9 @@ gatsby-graphiql-explorer@^0.11.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-gatsby-image@^2.5.0:
+gatsby-image@^2.11.0:
   version "2.11.0"
-  resolved "https://registry.npmjs.org/gatsby-image/-/gatsby-image-2.11.0.tgz"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.11.0.tgz#5bbd02c3dcf78291131de26da061b4180bb67e6e"
   integrity sha512-H1va64RgXizYXONhoqB3rAdSqALZi0hkBYqEsc0peVEYzb2maRhEwOchg65hKvp3HT/ahnfrik59epRguYvi/g==
   dependencies:
     "@babel/runtime" "^7.12.5"
@@ -6440,10 +6440,10 @@ gatsby-plugin-sass@^3.2.0:
     "@babel/runtime" "^7.12.5"
     sass-loader "^10.1.0"
 
-gatsby-plugin-sharp@^2.8.0:
-  version "2.14.0"
-  resolved "https://registry.npmjs.org/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.14.0.tgz"
-  integrity sha512-399SJ83vuqP2gkf0PdC1CXALNebPfaTxzuE3uF1LalemeXuBlR0YvVo5QG84AxhnEzTfg5hWKk36F5A36xX9ow==
+gatsby-plugin-sharp@^2.14.1:
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.14.1.tgz#163b4b2456b7f5125bccb8e6a6bef73d9cab9941"
+  integrity sha512-JhYaVtXJeocJ6VWaZqDMLbKVbvfUh5zZcvRTDtCGjZsBqFaVxffnkBI46b/nxpDzfJQwmixDU7Chyxu0Dbzh+A==
   dependencies:
     "@babel/runtime" "^7.12.5"
     async "^3.2.0"
@@ -6556,6 +6556,23 @@ gatsby-recipes@^0.9.0:
     ws "^7.3.0"
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
+
+gatsby-remark-images@^3.11.0:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.11.0.tgz#e7cdf205c8c60f534292453e1a01dbb9c754936b"
+  integrity sha512-IjttA5Z3A5DG2rusdRqwGL6tfGoe7KO+Hu4izLcKfCXyh5aNpSPMD+L7lNuRLefL8cLA9C1w981PGGiRxiw0iw==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    chalk "^4.1.0"
+    cheerio "^1.0.0-rc.3"
+    gatsby-core-utils "^1.10.0"
+    is-relative-url "^3.0.0"
+    lodash "^4.17.20"
+    mdast-util-definitions "^1.2.5"
+    potrace "^2.1.8"
+    query-string "^6.13.3"
+    unist-util-select "^1.5.0"
+    unist-util-visit-parents "^2.1.2"
 
 gatsby-source-filesystem@^2.11.0:
   version "2.11.0"
@@ -9241,7 +9258,7 @@ mdast-util-compact@^2.0.0:
   dependencies:
     unist-util-visit "^2.0.0"
 
-mdast-util-definitions@^1.2.0:
+mdast-util-definitions@^1.2.0, mdast-util-definitions@^1.2.5:
   version "1.2.5"
   resolved "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-1.2.5.tgz"
   integrity sha512-CJXEdoLfiISCDc2JB6QLb79pYfI6+GcIH+W2ox9nMc7od0Pz+bovcHsiq29xAQY6ayqe/9CsK2VzkSJdg1pFYA==
@@ -11500,7 +11517,7 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
-query-string@^6.13.1, query-string@^6.13.8:
+query-string@^6.13.1, query-string@^6.13.3, query-string@^6.13.8:
   version "6.13.8"
   resolved "https://registry.npmjs.org/query-string/-/query-string-6.13.8.tgz"
   integrity sha512-jxJzQI2edQPE/NPUOusNjO/ZOGqr1o2OBa/3M00fU76FsLXDVbJDv/p7ng5OdQyorKrkRz1oqfwmbe5MAMePQg==
@@ -14106,7 +14123,7 @@ unist-util-visit-children@^1.0.0:
   resolved "https://registry.npmjs.org/unist-util-visit-children/-/unist-util-visit-children-1.1.4.tgz"
   integrity sha512-sA/nXwYRCQVRwZU2/tQWUqJ9JSFM1X3x7JIOsIgSzrFHcfVt6NkzDtKzyxg2cZWkCwGF9CO8x4QNZRJRMK8FeQ==
 
-unist-util-visit-parents@^2.0.0:
+unist-util-visit-parents@^2.0.0, unist-util-visit-parents@^2.1.2:
   version "2.1.2"
   resolved "https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-2.1.2.tgz"
   integrity sha512-DyN5vD4NE3aSeB+PXYNKxzGsfocxp6asDc2XXE3b0ekO2BaRUpBicbbUygfSvYfUz1IkmjFR1YF7dPklraMZ2g==

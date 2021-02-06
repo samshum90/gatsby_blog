@@ -5,13 +5,6 @@
   padding-bottom: 90px;
 }
 
-.intro {
-  height: 10vh;
-  background-color: #0091ad;
-  text-align: center;
-  padding: 0.7rem;
-}
-
 .post {
   display: -ms-grid;
   display: grid;
@@ -22,9 +15,6 @@
   border-style: solid none;
   margin: 20px 0;
   background-color: #f8f9fa;
-  text-decoration: none;
-  color: #000103;
-  cursor: pointer;
 }
 
 .post__text {
@@ -38,17 +28,12 @@
   padding: 0.5rem;
 }
 
-.post__text p {
-  padding: 0.5rem;
-}
-
 .post__image {
   -ms-grid-column-align: end;
       justify-self: end;
 }
 
-.post:hover {
-  -webkit-filter: brightness(60%);
-          filter: brightness(60%);
+.blogPost {
+  padding: 100px;
 }
-/*# sourceMappingURL=Main.css.map */
+/*# sourceMappingURL=blogPost.css.map */

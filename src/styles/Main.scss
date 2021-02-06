@@ -1,1 +1,45 @@
 @import "variables";
+
+.home {
+  margin: 0 auto;
+  width: 70vw;
+  padding-bottom: $footer-height;
+}
+
+.intro {
+  height: 10vh;
+  background-color: $theme-color;
+  text-align: center;
+  padding: 0.7rem;
+}
+.post {
+  display: grid;
+  grid-template-columns: auto auto;
+  //   min-height: 20vh;
+  height: auto;
+  border: solid 1px #dee2e6;
+  border-style: solid none;
+  margin: 20px 0;
+  background-color: $tertiary-color;
+  text-decoration: none;
+  color: $text-color;
+  cursor: pointer;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+
+    & p {
+      padding: 0.5rem;
+    }
+  }
+
+  &__image {
+    justify-self: end;
+  }
+
+  &:hover {
+    filter: brightness(60%);
+  }
+}

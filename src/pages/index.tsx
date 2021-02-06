@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import "../styles/Main.scss"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout/layout"
 import Banner from "../components/banner/banner"
@@ -21,21 +22,30 @@ const IndexPage: React.FC<Props> = ({ data }: Props) => {
 
   return (
     <Layout>
-      <div>
-        <Banner />
+      <Banner />
+      <div className="intro">
+        <h2>Introduction</h2>
+        <p>Hi </p>
+      </div>
+      <div className="home">
         {edges.map((edge: any) => {
           const { frontmatter } = edge.node
           return (
-            <div key={frontmatter.path}>
-              <Link to={frontmatter.path}>{frontmatter.title}</Link>
-              &nbsp;
-              <small>
-                {" "}
-                <em>published on</em> {frontmatter.date}
-              </small>
-              <p>{frontmatter.excerpt}</p>
-              <br />
-            </div>
+            <Link to={frontmatter.path} className="post" key={frontmatter.path}>
+              <div className="post__text">
+                <h2>{frontmatter.title}</h2>
+                <small>
+                  <em>published on</em> {frontmatter.date}
+                </small>
+                <p>{frontmatter.excerpt}</p>
+              </div>
+              <div className="post__image">
+                <Img
+                  fixed={frontmatter.featuredImage.childImageSharp.fixed}
+                  alt={frontmatter.title}
+                />
+              </div>
+            </Link>
           )
         })}
       </div>
@@ -56,6 +66,13 @@ export const query = graphql`
             path
             tags
             excerpt
+            featuredImage {
+              childImageSharp {
+                fixed(width: 125, height: 125) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }
