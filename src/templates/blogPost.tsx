@@ -32,33 +32,39 @@ const Template: React.FC<Props> = ({ data, pathContext }: Props) => {
         <div className="blogPost__title">
           <h1 className="blogPost__title-text">{title}</h1>
         </div>
-        <div>
-          <em>{date}</em>
+        <div className="blogPost__content">
+          <div className="blogPost__date">
+            <em>{date}</em>
+          </div>
+          <div
+            className="blogpost"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </div>
-        <br />
-        <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
-        <p>
-          {prev && (
-            <Link to={prev.frontmatter.path}>
-              {prev.frontmatter.title}{" "}
-              <span role="img" aria-label="point-left">
-                👈{" "}
-              </span>
-              Previous
-            </Link>
-          )}
-        </p>
-        <p>
-          {next && (
-            <Link to={next.frontmatter.path}>
-              Next{" "}
-              <span role="img" aria-label="point-right">
-                👉
-              </span>
-              {next.frontmatter.title}
-            </Link>
-          )}
-        </p>
+        <div className="blogPost__link">
+          <p>
+            {prev && (
+              <Link to={prev.frontmatter.path}>
+                {prev.frontmatter.title}{" "}
+                <span role="img" aria-label="point-left">
+                  ⬅{" "}
+                </span>
+                Previous
+              </Link>
+            )}
+          </p>
+          <p>
+            {next && (
+              <Link to={next.frontmatter.path}>
+                Next{" "}
+                <span role="img" aria-label="point-right">
+                  ➡
+                </span>
+                {next.frontmatter.title}
+              </Link>
+            )}
+          </p>
+        </div>
       </div>
     </Layout>
   )

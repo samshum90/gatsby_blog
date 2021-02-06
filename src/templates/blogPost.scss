@@ -1,8 +1,30 @@
 @import "../styles/Main.scss";
 
 .blogPost {
-  padding: 100px;
-
   &__title {
+    min-height: 7vh;
+    height: auto;
+    background-color: $theme-color;
+    text-align: center;
+    padding: 1rem;
+
+    &-text {
+    }
+  }
+
+  &__content {
+    padding: 0 5rem;
+  }
+
+  &__date {
+    text-align: right;
+    margin: 1rem;
+  }
+
+  &__link {
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    bottom: $footer-height;
   }
 }

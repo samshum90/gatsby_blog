@@ -18,9 +18,9 @@ const Header: React.FC<Props> = ({ siteTitle }: Props) => (
     </div>
 
     <nav className="header__bar">
-      <Link to="/" className="header__bar-link">
+      <a href="https://samshum90.github.io/" className="header__bar-link">
         Work
-      </Link>
+      </a>
     </nav>
   </div>
 )
