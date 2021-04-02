@@ -5,16 +5,26 @@
   padding-bottom: 90px;
 }
 
+.intro {
+  height: 10vh;
+  background-color: #0091ad;
+  text-align: center;
+  padding: 0.7rem;
+}
+
 .post {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
-  min-height: 20vh;
   height: auto;
-  border: solid 1px;
+  border: solid 1px #dee2e6;
+  border-style: solid none;
   margin: 20px 0;
   background-color: #f8f9fa;
+  text-decoration: none;
+  color: #000103;
+  cursor: pointer;
 }
 
 .post__text {
@@ -28,9 +38,18 @@
   padding: 0.5rem;
 }
 
+.post__text p {
+  padding: 0.5rem;
+}
+
 .post__image {
   -ms-grid-column-align: end;
       justify-self: end;
+}
+
+.post:hover {
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
 }
 
 .banner {
@@ -45,7 +64,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("../../assets/blog_banner.png");
+  background-image: url("./blog_banner.png");
   background-repeat: no-repeat;
   background-position: 0 90px;
   background-attachment: fixed;
